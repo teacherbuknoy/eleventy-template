@@ -1,0 +1,13 @@
+---
+title: Homepage
+permalink: /
+layout: main.njk
+---
+
+<h1>Home</h1>
+
+<ul>
+  {% for item in collections.blogs %}
+    <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+  {% endfor %}
+</ul>
