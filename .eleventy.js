@@ -1,8 +1,8 @@
+const collections = require('./src/config/collections.js')
+
 module.exports = function (config) {
-  config.addCollection('blogs', collections => {
-    return collections.getFilteredByGlob([
-      'src/blogs/*.md'
-    ])
+  Object.keys(collections).forEach(collectionType => {
+    config.addCollection(collectionType, collections[collectionType])
   })
 
   return {
