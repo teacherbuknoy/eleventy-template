@@ -9,7 +9,8 @@ module.exports = function (config) {
     dir: {
       input: 'src',
       output: 'public',
-      layouts: 'templates'
+      layouts: 'templates',
+      includes: 'components'
     },
     templateFormats: ['md', 'html', 'njk']
   }
